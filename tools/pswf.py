@@ -6,7 +6,7 @@ import socket #Process socket data
 import pyfiglet
 import sys
 import os
-
+from subprocess import call
 
 def SplashScreen():
 	print("         .            )        )")
@@ -139,7 +139,9 @@ def Menucrunch():
 		nameSfile = input("Enter the name of your wordlist is saved ex: (word.txt) : ")
 		print("")
 		print("Success")
-		os.system('python crunch.py -m '+minChar+' -M '+maxChar +' -c '+vic+ ' -o '+nameSfile)
+		os.system('python3 crunch.py -m '+minChar+' -M '+maxChar +' -c '+vic+ ' -o '+nameSfile)
+		#call(['python3', 'crunch.py -m '+minChar+' -M '+maxChar +' -c '+vic+ ' -o '+nameSfile])	
+		#call(['python3 crunch.py -m '+minChar+' -M '+maxChar +' -c '+vic+ ' -o '+nameSfile])
 		print("")
 		print("()================================()")
 		print("()            COMPLETED           ()")
@@ -152,7 +154,8 @@ def Menucrunch():
 	if saveFile == str("N") or saveFile == str("n"):
 		print("Go to the next step \../ ")
 		print("")
-		os.system('python crunch.py -m '+minChar+' -M '+maxChar +' -c '+vic)
+		call(["python3", "crunch.py -m "+minChar+" -M "+maxChar +" -c "+vic])
+		#os.system('python crunch.py -m '+minChar+' -M '+maxChar +' -c '+vic)
 		print("")
 		print("()================================()")
 		print("()            COMPLETED           ()")
