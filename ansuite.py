@@ -46,9 +46,15 @@ def SplashScreen():
 
 
 def listatool():
+	
+	
 	print("YouTube Downloader | digita - ytdown \n")
 	print("Backdoor Backfucker | digita - backfucker \n")
 	print("Password Generator | digita - makepsw \n")
+	
+	
+	return MenuPrincipale()
+	
 
 def Funzioni():
 	print ("Ciao")
@@ -58,6 +64,9 @@ def Funzioni():
 
 
 def MenuPrincipale():
+	ascii_banner = pyfiglet.figlet_format("Anonik Suite")
+	print(ascii_banner)
+	print("")
 	print ("============================================")
 	print("               MENU PRINCIPALE               ")
 	print ("")
@@ -73,7 +82,7 @@ def MenuPrincipale():
 	
 	if sceltaMenu == str("1"):
 		return (listatool())
-		sys.exit()
+		
 		
 	if sceltaMenu == str("ytdown"):
 		print("")
